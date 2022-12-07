@@ -9,11 +9,14 @@ function ascend() {
     let password = document.getElementById("password").value
     username = username.toLowerCase();
     password = password.toLowerCase();
-    if (username === "goblin" && password === "cage") {
-        document.getElementById("5").innerHTML = "Hello Admin."
+    if (username !== "goblin") {
+        document.getElementById("5").innerHTML = "bad username"
+        imgresult.src = "goblin.png"
+    } else if (username === "goblin" && password !== "cage") {
+        document.getElementById("5").innerHTML = "bad password"
         imgresult.src = "goblin.png"
     } else {
-        document.getElementById("5").innerHTML = "GOBLIN CAGE!"
+        document.getElementById("5").innerHTML = "Welcome Admin"
     }
 }
 
